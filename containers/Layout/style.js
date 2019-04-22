@@ -11,6 +11,8 @@ export const GlobalStyle = createGlobalStyle`
     padding: 25px;
     background-color: ${props => props.theme.bg};
     font-family: 'Segoe UI', sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
   }
 
   a {
@@ -28,5 +30,7 @@ export const Page = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 1.5rem 2.5rem;
   background-color: ${props => props.theme.white};
+  box-shadow: ${props => props.theme.boxShadow};
 `;

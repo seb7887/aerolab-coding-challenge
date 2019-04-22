@@ -6,8 +6,8 @@ import { PointsContainer } from './style';
 
 const Points = ({ name, points }) => (
   <PointsContainer>
-    <h2>{`${name}`}</h2>
-    <div>
+    <h2 className='name'>{`${name}`}</h2>
+    <div className='touchable'>
       <h2>{`${points}`}</h2>
       <Coin />
     </div>

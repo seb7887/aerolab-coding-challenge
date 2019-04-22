@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 import Logo from './Logo';
 import Points from './Points';
@@ -16,7 +17,11 @@ class Header extends React.PureComponent {
     const { me } = this.props;
     return (
       <HeaderContainer>
-        <Logo />
+        <Link href='/'>
+          <a>
+            <Logo />
+          </a>
+        </Link>
         <Points name={me.name} points={me.points} />
       </HeaderContainer>
     );
