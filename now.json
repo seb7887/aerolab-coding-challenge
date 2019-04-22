@@ -1,0 +1,6 @@
+{
+  "version": 1.0,
+  "name": "aerolab-challenge",
+  "alias": "aerolab-store.now.sh",
+  "dotenv": true
+}
