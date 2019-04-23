@@ -1,14 +1,23 @@
 import React from 'react';
 
+import { getProducts } from '../services';
+
 import Banner from '../components/Banner';
+import Products from '../components/Products';
 
 class Index extends React.Component {
+  static async getInitialProps() {
+    const products = await getProducts();
+    return {
+      products
+    };
+  }
+
   render() {
-    const { me } = this.props;
     return (
       <>
         <Banner />
-        <>{!me ? <h1>Loading</h1> : <h1>Hello {`${me.name}`}</h1>}</>
+        <Products />
       </>
     );
   }
