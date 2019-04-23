@@ -5,7 +5,7 @@ import Coin from '../shared/Coin';
 import { PointsContainer } from './style';
 
 const Points = ({ name, points, addPoints }) => (
-  <PointsContainer onClick={addPoints}>
+  <PointsContainer onClick={addPoints} data-testid='points'>
     <h2 className='name'>{`${name}`}</h2>
     <div className='touchable'>
       <h2>{`${points}`}</h2>

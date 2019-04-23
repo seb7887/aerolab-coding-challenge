@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders and matches snapshot 1`] = `
+<DocumentFragment>
+  <nav
+    class="style__Navbar-hz5b73-0 cfNmiU"
+    data-testid="header"
+  >
+    <div
+      class="top-container"
+    >
+      <a>
+        <img
+          alt="Aerolab Logo"
+          src="/static/images/aerolab-logo.svg"
+        />
+      </a>
+      <div
+        class="style__PointsContainer-hz5b73-1 hPecVr"
+        data-testid="points"
+      >
+        <h2
+          class="name"
+        >
+          John Kite
+        </h2>
+        <div
+          class="touchable"
+        >
+          <h2>
+            7000
+          </h2>
+          <img
+            alt="Coin"
+            class="Coin__Img-sc-1i19xvt-0 cnqtJE"
+            src="/static/images/coin.svg"
+          />
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div
+      class="bottom-container"
+    >
+      Dark Theme 
+      <a
+        class="ToggleSwitch__Switch-sc-1oi44tq-0 bYYtGF"
+      />
+      <a>
+        <img
+          alt="History"
+          src="/static/images/history.svg"
+        />
+      </a>
+    </div>
+  </nav>
+</DocumentFragment>
+`;

@@ -26,7 +26,6 @@ Router.onRouteChangeError = () => {
 
 class Header extends React.Component {
   addPoints = async () => {
-    console.log('add points');
     await addPointsService();
     Router.push('/');
   };
@@ -34,7 +33,7 @@ class Header extends React.Component {
   render() {
     const { me, changeTheme, isActive } = this.props;
     return (
-      <Navbar>
+      <Navbar data-testid='header'>
         <div className='top-container'>
           <Link href='/'>
             <a>
