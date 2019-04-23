@@ -3,11 +3,9 @@ import Link from 'next/link';
 
 import Logo from './Logo';
 import Points from './Points';
+import HistoryIcon from './HistoryIcon';
 
-/**
- * @name Styles
- */
-import { HeaderContainer } from './style';
+import { Navbar } from './style';
 
 /**
  * @name Header-Component
@@ -16,14 +14,24 @@ class Header extends React.PureComponent {
   render() {
     const { me } = this.props;
     return (
-      <HeaderContainer>
-        <Link href='/'>
-          <a>
-            <Logo />
-          </a>
-        </Link>
-        <Points name={me.name} points={me.points} />
-      </HeaderContainer>
+      <Navbar>
+        <div className='top-container'>
+          <Link href='/'>
+            <a>
+              <Logo />
+            </a>
+          </Link>
+          <Points name={me.name} points={me.points} />
+        </div>
+        <hr />
+        <div className='bottom-container'>
+          <Link href='/history'>
+            <a>
+              <HistoryIcon />
+            </a>
+          </Link>
+        </div>
+      </Navbar>
     );
   }
 }

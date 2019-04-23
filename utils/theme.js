@@ -5,8 +5,11 @@ const orange = '#ff6e05';
 
 const bgLight = '#e9ebf1';
 const bgDark = '#212531';
-const boxShadowLight = '0px 0px 2px 0px rgba(0, 0, 0, 0.1)';
+const boxShadowLight = '0px 0px 3px 0px rgba(0, 0, 0, 0.1)';
 const boxShadowDark = 'rgba(31, 31, 31, 0.1)';
+
+const primaryDark = '#f8f8f8';
+const primaryLight = '#616161';
 const greyLight = '#e0e0e0';
 const greyDark = '#a3a3a3';
 
@@ -18,7 +21,8 @@ const theme = {
     orange,
     grey: greyLight,
     bg: bgLight,
-    boxShadow: boxShadowLight
+    boxShadow: boxShadowLight,
+    primary: primaryLight
   },
   dark: {
     black,
@@ -27,7 +31,8 @@ const theme = {
     orange,
     grey: greyDark,
     bg: bgDark,
-    boxShadow: boxShadowDark
+    boxShadow: boxShadowDark,
+    primary: primaryDark
   }
 };
 

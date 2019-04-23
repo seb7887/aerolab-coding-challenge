@@ -1,6 +1,13 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: 'Inter-UI-Light';
+    font-weight: normal;
+    font-style: normal;
+    src: url('/static/fonts/Inter-Light-BETA.woff2') format('woff2');
+  }
+
   * {
     box-sizing: border-box;
     transition: all .2s, color .1s;
@@ -10,9 +17,12 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 25px;
     background-color: ${props => props.theme.bg};
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Inter-UI-Light', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    color: ${props => props.theme.primary};
   }
 
   a {
@@ -20,7 +30,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   hr {
-    margin: 0;
+    margin-top: 1rem;
     border: 0;
     border-top: 1px solid ${props => props.theme.grey};
   }
@@ -30,7 +40,7 @@ export const Page = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1.5rem 2.5rem;
+  padding: 1.2rem 1.5rem;
   background-color: ${props => props.theme.white};
   box-shadow: ${props => props.theme.boxShadow};
 `;
