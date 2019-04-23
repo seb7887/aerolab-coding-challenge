@@ -1,18 +1,38 @@
 import React from 'react';
+import Router from 'next/router';
 import Link from 'next/link';
+import NProgress from 'nprogress';
+
+import { addPointsService } from '../../services';
 
 import Logo from './Logo';
 import Points from './Points';
 import HistoryIcon from './HistoryIcon';
+import ToggleSwitch from './ToggleSwitch';
 
 import { Navbar } from './style';
 
-/**
- * @name Header-Component
- */
-class Header extends React.PureComponent {
+Router.onRouteChangeStart = () => {
+  NProgress.start();
+};
+
+Router.onRouteChangeComplete = () => {
+  NProgress.done();
+};
+
+Router.onRouteChangeError = () => {
+  NProgress.done();
+};
+
+class Header extends React.Component {
+  addPoints = async () => {
+    console.log('add points');
+    await addPointsService();
+    Router.push('/');
+  };
+
   render() {
-    const { me } = this.props;
+    const { me, changeTheme, isActive } = this.props;
     return (
       <Navbar>
         <div className='top-container'>
@@ -21,10 +41,15 @@ class Header extends React.PureComponent {
               <Logo />
             </a>
           </Link>
-          <Points name={me.name} points={me.points} />
+          <Points
+            name={me.name}
+            points={me.points}
+            addPoints={this.addPoints}
+          />
         </div>
         <hr />
         <div className='bottom-container'>
+          <ToggleSwitch isActive={isActive} changeTheme={changeTheme} />
           <Link href='/history'>
             <a>
               <HistoryIcon />

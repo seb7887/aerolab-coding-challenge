@@ -8,6 +8,7 @@ const Meta = () => (
       content='width=device-width, initial-scale=1, shrink-to-fit=no'
     />
     <meta charSet='utf-8' />
+    <link rel='stylesheet' type='text/css' href='/static/nprogress.css' />
     <title>Aerolab Store</title>
   </Head>
 );

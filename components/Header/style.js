@@ -14,6 +14,7 @@ export const Navbar = styled.nav`
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
     margin-top: 0.8rem;
   }
 `;
@@ -22,6 +23,7 @@ export const PointsContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  cursor: pointer;
 
   .name {
     margin: 0 7px 0 0;

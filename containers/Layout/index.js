@@ -14,6 +14,10 @@ import Meta from './Meta';
 import Header from '../../components/Header';
 
 class Layout extends React.Component {
+  state = {
+    lightTheme: true
+  };
+
   static async getInitialProps({ store }) {
     await store.dispatch(getCurrentUser());
   }
@@ -23,10 +27,17 @@ class Layout extends React.Component {
     getCurrentUser();
   }
 
+  changeTheme = () => {
+    const { lightTheme } = this.state;
+    this.setState({ lightTheme: !lightTheme });
+  };
+
   render() {
+    const { lightTheme } = this.state;
     const { children, currentUser } = this.props;
+
     return (
-      <ThemeProvider theme={theme.light}>
+      <ThemeProvider theme={lightTheme ? theme.light : theme.dark}>
         <Page>
           <GlobalStyle />
           {!currentUser ? (
@@ -34,7 +45,11 @@ class Layout extends React.Component {
           ) : (
             <>
               <Meta />
-              <Header me={currentUser} />
+              <Header
+                me={currentUser}
+                changeTheme={this.changeTheme}
+                isActive={!lightTheme}
+              />
               {children}
             </>
           )}

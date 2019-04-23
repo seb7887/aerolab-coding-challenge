@@ -2,6 +2,8 @@ const black = '#000';
 const white = '#fff';
 const cyan = '#0ad4fa';
 const orange = '#ff6e05';
+const red = 'red';
+const green = 'green';
 
 const bgLight = '#e9ebf1';
 const bgDark = '#212531';
@@ -19,6 +21,8 @@ const theme = {
     white,
     cyan,
     orange,
+    red,
+    green,
     grey: greyLight,
     bg: bgLight,
     boxShadow: boxShadowLight,
@@ -29,6 +33,8 @@ const theme = {
     white,
     cyan,
     orange,
+    red,
+    green,
     grey: greyDark,
     bg: bgDark,
     boxShadow: boxShadowDark,
