@@ -4,7 +4,7 @@ import config from '../config';
 
 const { token, apiEndpoint } = config;
 
-export const addPointsService = async () => {
+export const addPoints = async () => {
   const response = await fetch(`${apiEndpoint}/user/points`, {
     method: 'POST',
     headers: {

@@ -1,7 +1,7 @@
 import { render, fireEvent } from 'react-testing-library';
 import Router from 'next/router';
 
-import { addPointsService as mockAddPointsService } from '../../../services';
+import { addPoints as mockAddPointsService } from '../../../services';
 import Header from '../index';
 import { fakeUser } from '../../../utils/testUtils';
 
@@ -9,7 +9,7 @@ const mockChangeTheme = jest.fn();
 
 jest.mock('../../../services', () => {
   return {
-    addPointsService: jest.fn(() => Promise.resolve())
+    addPoints: jest.fn(() => Promise.resolve())
   };
 });
 

@@ -23,6 +23,10 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     color: ${props => props.theme.primary};
+
+    @media (max-width: 770px) {
+      padding: 0;
+    }
   }
 
   a {
@@ -41,6 +45,6 @@ export const Page = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 1.2rem 1.5rem;
-  background-color: ${props => props.theme.white};
+  background-color: ${props => props.theme.containerBg};
   box-shadow: ${props => props.theme.boxShadow};
 `;

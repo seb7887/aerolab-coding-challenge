@@ -4,7 +4,7 @@ import config from '../config';
 
 const { token, apiEndpoint } = config;
 
-export const currentUserService = async () => {
+export const getCurrentUser = async () => {
   const response = await fetch(`${apiEndpoint}/user/me`, {
     method: 'GET',
     headers: {

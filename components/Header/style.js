@@ -27,7 +27,7 @@ export const PointsContainer = styled.div`
 
   .name {
     margin: 0 7px 0 0;
-    color: ${props => props.theme.black};
+    color: ${props => props.theme.secondary};
   }
 
   .touchable {

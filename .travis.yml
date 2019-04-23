@@ -1,0 +1,28 @@
+language: node_js
+node_js:
+  - 'lts/*'
+
+cache:
+  directories:
+    - ~/.npm
+    - ~/.cache
+
+notifications:
+  email: false
+
+jobs:
+  include:
+    - stage: test
+      script: npm install && npm test
+      on:
+        branch: develop
+    - stage: deploy
+      script: npm install && npm run deploy
+      on:
+        branch: master
+
+stages:
+  - name: test
+    if: (branch = develop)
+  - name: deploy
+    if: (branch = master)

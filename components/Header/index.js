@@ -3,7 +3,7 @@ import Router from 'next/router';
 import Link from 'next/link';
 import NProgress from 'nprogress';
 
-import { addPointsService } from '../../services';
+import { addPoints } from '../../services';
 
 import Logo from './Logo';
 import Points from './Points';
@@ -26,7 +26,7 @@ Router.onRouteChangeError = () => {
 
 class Header extends React.Component {
   addPoints = async () => {
-    await addPointsService();
+    await addPoints();
     Router.push('/');
   };
 

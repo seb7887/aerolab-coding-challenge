@@ -1,2 +1,2 @@
-export { currentUserService } from './currentUserService';
-export { addPointsService } from './addPointsService';
+export { getCurrentUser } from './getCurrentUser';
+export { addPoints } from './addPoints';
