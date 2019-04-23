@@ -1,5 +1,10 @@
 import React from 'react';
 
-const Index = () => <h1>Hello Next</h1>;
+class Index extends React.Component {
+  render() {
+    const { me } = this.props;
+    return <>{!me ? <h1>Loading</h1> : <h1>Hello {`${me.name}`}</h1>}</>;
+  }
+}
 
 export default Index;
