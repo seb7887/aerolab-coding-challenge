@@ -18,7 +18,7 @@ export const Content = styled.div`
     font-size: 2rem;
     font-weight: 1400;
     color: ${props => props.theme.white};
-    padding: 0 1rem;
+    padding: 0 3rem;
   }
 
   .overlay {
