@@ -9,11 +9,15 @@ class Index extends React.Component {
   static async getInitialProps({ query }) {
     const page = query.page ? query.page : 0;
     const sort = query.sort ? query.sort : 'recent';
+    const category = query.category ? query.category : 'all';
+
     const products = await getProducts(query);
+
     return {
       products,
       page,
-      sort
+      sort,
+      category
     };
   }
 

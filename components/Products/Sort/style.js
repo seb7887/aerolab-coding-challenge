@@ -5,7 +5,8 @@ export const Container = styled.div`
   flex-direction: row;
   align-items: center;
   font-size: 1rem;
-  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid ${props => props.theme.grey};
 
   .sort {
     padding-left: 1rem;

@@ -11,6 +11,8 @@ const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid ${props => props.theme.grey};
 
   @media (max-width: 770px) {
     justify-content: flex-end;
