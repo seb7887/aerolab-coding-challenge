@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Quantity from './Quantity';
+import Quantity from '../../shared/Quantity';
 import Filters from './Filters';
 import Pagination from '../../shared/Pagination';
 
