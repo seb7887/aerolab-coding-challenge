@@ -1,7 +1,6 @@
 import React from 'react';
+import Link from 'next/link';
 import styled from 'styled-components';
-
-import Button from '../../shared/Button';
 
 const Container = styled.div`
   display: flex;
@@ -21,17 +20,54 @@ const Container = styled.div`
     flex-direction: row;
     align-items: center;
   }
+
+  a {
+    margin-right: 1rem;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 9px 12px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    background-color: ${props => props.theme.bg};
+    cursor: pointer;
+
+    &.current {
+      background-color: ${props => props.theme.orange};
+      color: ${props => props.theme.white};
+      cursor: default;
+    }
+
+    &:hover {
+      background-color: ${props => props.theme.orange};
+      color: ${props => props.theme.white};
+    }
+  }
 `;
 
-const Filters = ({ sort }) => (
-  <Container>
-    <div className='title'>Sort by:</div>
-    <div className='buttons'>
-      <Button isActive={sort === 'recent'}>Most recent</Button>
-      <Button isActive={sort === 'low'}>Lower price</Button>
-      <Button isActive={sort === 'high'}>Higher price</Button>
-    </div>
-  </Container>
-);
+const Filters = ({ category, sort, page }) => {
+  const isRecent = sort === 'recent';
+  const isLow = sort === 'low';
+  const isHigh = sort === 'high';
+
+  return (
+    <Container>
+      <div className='title'>Sort by:</div>
+      <div className='buttons'>
+        <Link href={`?category=${category}&sort=recent&page=${page}`}>
+          <a className={isRecent ? 'current' : ''}>Most recent</a>
+        </Link>
+        <Link href={`?category=${category}&sort=low&page=${page}`}>
+          <a className={isLow ? 'current' : ''}>Lower price</a>
+        </Link>
+        <Link href={`?category=${category}&sort=high&page=${page}`}>
+          <a className={isHigh ? 'current' : ''}>Higher price</a>
+        </Link>
+      </div>
+    </Container>
+  );
+};
 
 export default Filters;

@@ -4,8 +4,6 @@ import shortid from 'shortid';
 
 import { Container } from './style';
 
-// import Category from './Category';
-
 const categories = [
   'all',
   'gaming',

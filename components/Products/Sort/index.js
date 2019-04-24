@@ -8,7 +8,7 @@ import { Container } from './style';
 
 import config from '../../../config';
 
-const Sort = ({ page, sort, total }) => {
+const Sort = ({ page, sort, category, total }) => {
   const { perPage } = config;
   const quantity = total > perPage ? (page + 1) * perPage : total;
 
@@ -16,8 +16,14 @@ const Sort = ({ page, sort, total }) => {
     <Container>
       <Quantity quantity={quantity} total={total} />
       <div className='sort'>
-        <Filters sort={sort} />
-        <Pagination page={page} total={total} perPage={perPage} />
+        <Filters category={category} sort={sort} page={page} />
+        <Pagination
+          category={category}
+          sort={sort}
+          page={page}
+          total={total}
+          perPage={perPage}
+        />
       </div>
     </Container>
   );
