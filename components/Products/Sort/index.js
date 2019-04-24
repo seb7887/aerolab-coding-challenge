@@ -10,13 +10,13 @@ import config from '../../../config';
 
 const Sort = ({ page, sort, category, total }) => {
   const { perPage } = config;
-  const quantity = total > perPage ? (page + 1) * perPage : total;
+  const quantity = total > perPage ? (parseInt(page, 10) + 1) * perPage : total;
 
   return (
     <Container>
       <Quantity quantity={quantity} total={total} />
       <div className='sort'>
-        <Filters category={category} sort={sort} page={page} />
+        <Filters category={category} sort={sort} />
         <Pagination
           category={category}
           sort={sort}

@@ -47,7 +47,7 @@ const Container = styled.div`
   }
 `;
 
-const Filters = ({ category, sort, page }) => {
+const Filters = ({ category, sort }) => {
   const isRecent = sort === 'recent';
   const isLow = sort === 'low';
   const isHigh = sort === 'high';
@@ -56,13 +56,43 @@ const Filters = ({ category, sort, page }) => {
     <Container>
       <div className='title'>Sort by:</div>
       <div className='buttons'>
-        <Link href={`?category=${category}&sort=recent&page=${page}`}>
+        <Link
+          prefetch
+          href={{
+            pathname: '/',
+            query: {
+              category,
+              sort: 'recent',
+              page: 0
+            }
+          }}
+        >
           <a className={isRecent ? 'current' : ''}>Most recent</a>
         </Link>
-        <Link href={`?category=${category}&sort=low&page=${page}`}>
+        <Link
+          prefetch
+          href={{
+            pathname: '/',
+            query: {
+              category,
+              sort: 'low',
+              page: 0
+            }
+          }}
+        >
           <a className={isLow ? 'current' : ''}>Lower price</a>
         </Link>
-        <Link href={`?category=${category}&sort=high&page=${page}`}>
+        <Link
+          prefetch
+          href={{
+            pathname: '/',
+            query: {
+              category,
+              sort: 'high',
+              page: 0
+            }
+          }}
+        >
           <a className={isHigh ? 'current' : ''}>Higher price</a>
         </Link>
       </div>

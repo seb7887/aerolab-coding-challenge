@@ -17,7 +17,7 @@ const Products = ({ page, sort, category, products }) => (
       />
     </div>
     <div id='filters'>
-      <Categories category={category} sort={sort} page={page} />
+      <Categories category={category} sort={sort} />
     </div>
     <div id='grid'>Grid</div>
     <div id='bottom'>

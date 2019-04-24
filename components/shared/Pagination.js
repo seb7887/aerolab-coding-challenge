@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 import BackButton from './BackButton';
@@ -10,13 +11,45 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const Pagination = ({ page, total, perPage }) => {
+const Pagination = ({ category, sort, page, total, perPage }) => {
   const pages = Math.ceil(total / perPage);
 
   return (
     <Container>
-      {!(page <= 0) && <BackButton />}
-      {!(page >= pages) && <NextButton />}
+      {!(page <= 0) && (
+        <Link
+          prefetch
+          href={{
+            pathname: '/',
+            query: {
+              category,
+              sort,
+              page: page - 1
+            }
+          }}
+        >
+          <a>
+            <BackButton />
+          </a>
+        </Link>
+      )}
+      {!(page >= pages) && (
+        <Link
+          prefetch
+          href={{
+            pathname: '/',
+            query: {
+              category,
+              sort,
+              page: page + 1
+            }
+          }}
+        >
+          <a>
+            <NextButton />
+          </a>
+        </Link>
+      )}
     </Container>
   );
 };

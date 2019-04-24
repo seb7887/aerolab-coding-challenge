@@ -17,7 +17,7 @@ const categories = [
   'home'
 ];
 
-const Categories = ({ category, sort, page }) => (
+const Categories = ({ category, sort }) => (
   <Container>
     <h3>Categories</h3>
     <>
@@ -25,7 +25,15 @@ const Categories = ({ category, sort, page }) => (
         const isCurrent = name === category;
         return (
           <Link
-            href={`?category=${name}&sort=${sort}&page=${page}`}
+            prefetch
+            href={{
+              pathname: '/',
+              query: {
+                category: name,
+                sort,
+                page: 0
+              }
+            }}
             key={shortid.generate()}
           >
             <a className={isCurrent ? 'current' : ''}>{name}</a>

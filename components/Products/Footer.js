@@ -21,7 +21,7 @@ const Container = styled.div`
 
 const Footer = ({ page, total }) => {
   const { perPage } = config;
-  const quantity = total > perPage ? (page + 1) * perPage : total;
+  const quantity = total > perPage ? (parseInt(page, 10) + 1) * perPage : total;
 
   return (
     <Container>
