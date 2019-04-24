@@ -11,6 +11,8 @@ const containerBgLight = '#fff';
 const containerBgDark = '#000';
 const boxShadowLight = '0px 0px 3px 0px rgba(0, 0, 0, 0.1)';
 const boxShadowDark = 'rgba(31, 31, 31, 0.1)';
+const productShadowLight = '0px 3px 4px 0px rgba(0, 0, 0, 0.1)';
+const productShadowDark = '0px 3px 4px 0px rgba(255, 255, 255, 0.1)';
 
 const primaryLight = '#616161';
 const primaryDark = '#f8f8f8';
@@ -32,6 +34,7 @@ const theme = {
     bg: bgLight,
     containerBg: containerBgLight,
     boxShadow: boxShadowLight,
+    productShadow: productShadowLight,
     primary: primaryLight,
     secondary: secondaryLight
   },
@@ -46,6 +49,7 @@ const theme = {
     bg: bgDark,
     containerBg: containerBgDark,
     boxShadow: boxShadowDark,
+    productShadow: productShadowDark,
     primary: primaryDark,
     secondary: secondaryDark
   }
