@@ -6,10 +6,12 @@ import Banner from '../components/Banner';
 import Products from '../components/Products';
 
 class Index extends React.Component {
-  static async getInitialProps() {
-    const products = await getProducts();
+  static async getInitialProps({ query }) {
+    const page = query.page ? query.page : 0;
+    const products = await getProducts(query);
     return {
-      products
+      products,
+      page
     };
   }
 
@@ -17,7 +19,7 @@ class Index extends React.Component {
     return (
       <>
         <Banner />
-        <Products />
+        <Products {...this.props} />
       </>
     );
   }
