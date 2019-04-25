@@ -7,7 +7,7 @@ import Footer from './Footer';
 
 import { ProductsLayout } from './style';
 
-const Products = ({ me, page, sort, category, products }) => (
+const Products = ({ me, page, sort, category, products, redeemProduct }) => (
   <ProductsLayout>
     <div id='top'>
       <Sort
@@ -21,7 +21,11 @@ const Products = ({ me, page, sort, category, products }) => (
       <Categories category={category} sort={sort} />
     </div>
     <div id='grid'>
-      <ProductGrid products={products.products} userPoints={me.points} />
+      <ProductGrid
+        products={products.products}
+        userPoints={me.points}
+        redeemProduct={redeemProduct}
+      />
     </div>
     <div id='bottom'>
       <Footer

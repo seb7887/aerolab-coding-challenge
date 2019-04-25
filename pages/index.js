@@ -1,6 +1,7 @@
 import React from 'react';
+import Router from 'next/router';
 
-import { getProducts } from '../services';
+import { getProducts, redeem } from '../services';
 
 import Banner from '../components/Banner';
 import Products from '../components/Products';
@@ -21,11 +22,16 @@ class Index extends React.Component {
     };
   }
 
+  redeemProduct = async productId => {
+    await redeem(productId);
+    Router.push('/history');
+  };
+
   render() {
     return (
       <>
         <Banner />
-        <Products {...this.props} />
+        <Products {...this.props} redeemProduct={this.redeemProduct} />
       </>
     );
   }

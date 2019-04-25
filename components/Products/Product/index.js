@@ -12,7 +12,7 @@ import {
   NeedCoins
 } from './style';
 
-const Product = ({ product, userPoints }) => (
+const Product = ({ product, userPoints, redeemProduct }) => (
   <Container>
     <Content>
       <div className='buy'>
@@ -39,7 +39,9 @@ const Product = ({ product, userPoints }) => (
               <span className='cost'>{product.cost}</span>
               <Coin />
             </div>
-            <RedeemButton>Redeem Now</RedeemButton>
+            <RedeemButton onClick={() => redeemProduct(product._id)}>
+              Redeem Now
+            </RedeemButton>
           </OverlayBlock>
         </div>
       )}

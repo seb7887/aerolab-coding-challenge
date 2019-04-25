@@ -4,11 +4,16 @@ import Product from '../Product';
 
 import { Grid } from './style';
 
-const ProductGrid = ({ userPoints, products }) => (
+const ProductGrid = ({ userPoints, products, redeemProduct }) => (
   <Grid>
     {products.map(product => {
       return (
-        <Product key={product._id} product={product} userPoints={userPoints} />
+        <Product
+          key={product._id}
+          product={product}
+          userPoints={userPoints}
+          redeemProduct={redeemProduct}
+        />
       );
     })}
   </Grid>
