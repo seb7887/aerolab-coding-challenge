@@ -67,7 +67,9 @@ const Filters = ({ category, sort }) => {
             }
           }}
         >
-          <a className={isRecent ? 'current' : ''}>Most recent</a>
+          <a className={isRecent ? 'current' : ''} data-testid='sort-filter'>
+            Most recent
+          </a>
         </Link>
         <Link
           prefetch
@@ -80,7 +82,9 @@ const Filters = ({ category, sort }) => {
             }
           }}
         >
-          <a className={isLow ? 'current' : ''}>Lower price</a>
+          <a className={isLow ? 'current' : ''} data-testid='sort-filter'>
+            Lower price
+          </a>
         </Link>
         <Link
           prefetch
@@ -93,7 +97,9 @@ const Filters = ({ category, sort }) => {
             }
           }}
         >
-          <a className={isHigh ? 'current' : ''}>Higher price</a>
+          <a className={isHigh ? 'current' : ''} data-testid='sort-filter'>
+            Higher price
+          </a>
         </Link>
       </div>
     </Container>

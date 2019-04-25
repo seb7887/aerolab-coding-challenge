@@ -36,7 +36,9 @@ const Categories = ({ category, sort }) => (
             }}
             key={shortid.generate()}
           >
-            <a className={isCurrent ? 'current' : ''}>{name}</a>
+            <a className={isCurrent ? 'current' : ''} data-testid='category'>
+              {name}
+            </a>
           </Link>
         );
       })}

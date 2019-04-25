@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Categories renders and matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="style__Container-sc-15ofmo2-0 SyiiL"
+  >
+    <h3>
+      Categories
+    </h3>
+    <a
+      class="current"
+      data-testid="category"
+    >
+      all
+    </a>
+    <a
+      class=""
+      data-testid="category"
+    >
+      gaming
+    </a>
+    <a
+      class=""
+      data-testid="category"
+    >
+      laptops
+    </a>
+    <a
+      class=""
+      data-testid="category"
+    >
+      tablets
+    </a>
+    <a
+      class=""
+      data-testid="category"
+    >
+      cameras
+    </a>
+    <a
+      class=""
+      data-testid="category"
+    >
+      audio
+    </a>
+    <a
+      class=""
+      data-testid="category"
+    >
+      tv
+    </a>
+    <a
+      class=""
+      data-testid="category"
+    >
+      drones
+    </a>
+    <a
+      class=""
+      data-testid="category"
+    >
+      accessories
+    </a>
+    <a
+      class=""
+      data-testid="category"
+    >
+      home
+    </a>
+  </div>
+</DocumentFragment>
+`;

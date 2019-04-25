@@ -4,7 +4,7 @@ module.exports = {
   setupFilesAfterEnv: [require.resolve('./setup-tests.js')],
   collectCoverageFrom: [
     '**/components/**/*.js',
-    '**/containers/**/*.js',
+    '!**/containers/**/*.js',
     '!**/pages/**',
     '!**/utils/**',
     '!**/__tests__/**',

@@ -13,11 +13,11 @@ import {
 } from './style';
 
 const Product = ({ product, userPoints, redeemProduct }) => (
-  <Container>
+  <Container data-testid='product'>
     <Content>
       <div className='buy'>
         {userPoints < product.cost ? (
-          <NeedCoins>
+          <NeedCoins data-testid='need-coins'>
             You need {product.cost - userPoints} <Coin />
           </NeedCoins>
         ) : (
@@ -26,8 +26,12 @@ const Product = ({ product, userPoints, redeemProduct }) => (
       </div>
       <Img src={product.img.url} alt={product.name} />
       <div className='description'>
-        <span className='category'>{product.category}</span>
-        <span className='name'>{product.name}</span>
+        <span className='category' data-testid='category'>
+          {product.category}
+        </span>
+        <span className='name' data-testid='name'>
+          {product.name}
+        </span>
       </div>
       {userPoints >= product.cost && (
         <div className='overlay'>
@@ -36,10 +40,15 @@ const Product = ({ product, userPoints, redeemProduct }) => (
           </div>
           <OverlayBlock>
             <div className='cost-block'>
-              <span className='cost'>{product.cost}</span>
+              <span className='cost' data-testid='cost'>
+                {product.cost}
+              </span>
               <Coin />
             </div>
-            <RedeemButton onClick={() => redeemProduct(product._id)}>
+            <RedeemButton
+              onClick={() => redeemProduct(product._id)}
+              data-testid='redeem-button'
+            >
               Redeem Now
             </RedeemButton>
           </OverlayBlock>

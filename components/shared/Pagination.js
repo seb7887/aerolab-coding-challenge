@@ -12,7 +12,7 @@ const Container = styled.div`
 `;
 
 const Pagination = ({ category, sort, page, total, perPage }) => {
-  const pages = Math.ceil(total / perPage);
+  const pages = Math.ceil(total / perPage) - 1;
 
   return (
     <Container>
@@ -28,7 +28,7 @@ const Pagination = ({ category, sort, page, total, perPage }) => {
             }
           }}
         >
-          <a>
+          <a data-testid='back-button'>
             <BackButton />
           </a>
         </Link>
@@ -45,7 +45,7 @@ const Pagination = ({ category, sort, page, total, perPage }) => {
             }
           }}
         >
-          <a>
+          <a data-testid='next-button'>
             <NextButton />
           </a>
         </Link>
