@@ -2,13 +2,12 @@ import React from 'react';
 
 import Sort from './Sort';
 import Categories from './Categories';
-// TODO: saca esto y reemplaza por ProductGrid
 import ProductGrid from './ProductGrid';
 import Footer from './Footer';
 
 import { ProductsLayout } from './style';
 
-const Products = ({ page, sort, category, products }) => (
+const Products = ({ me, page, sort, category, products }) => (
   <ProductsLayout>
     <div id='top'>
       <Sort
@@ -22,7 +21,7 @@ const Products = ({ page, sort, category, products }) => (
       <Categories category={category} sort={sort} />
     </div>
     <div id='grid'>
-      <ProductGrid products={products.products} />
+      <ProductGrid products={products.products} userPoints={me.points} />
     </div>
     <div id='bottom'>
       <Footer

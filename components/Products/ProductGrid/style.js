@@ -5,5 +5,5 @@ export const Grid = styled.div`
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-column-gap: 1.5rem;
-  grid-row-gap: 2rem;
+  grid-row-gap: 2.5rem;
 `;
