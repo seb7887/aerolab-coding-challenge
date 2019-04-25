@@ -44,5 +44,9 @@ export const PointsContainer = styled.div`
     h2 {
       margin: 0 5px 0 0;
     }
+
+    @media (${props => props.theme.viewport.sm}) {
+      padding: 4px 4px;
+    }
   }
 `;

@@ -35,6 +35,15 @@ const Switch = styled.a`
   &.active:after {
     left: calc(100% - 30px);
   }
+
+  @media (${props => props.theme.viewport.sm}) {
+    height: 20px;
+    width: 35px;
+
+    &::after {
+      width: 20px;
+    }
+  }
 `;
 
 const ToggleSwitch = ({ isActive, changeTheme }) => (

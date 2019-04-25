@@ -24,8 +24,12 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     color: ${props => props.theme.primary};
 
-    @media (max-width: 770px) {
+    @media (${props => props.theme.viewport.md}) {
       padding: 0;
+    }
+
+    @media(${props => props.theme.viewport.sm}) {
+      font-size: 0.5rem;
     }
   }
 

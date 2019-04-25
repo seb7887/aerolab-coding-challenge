@@ -24,6 +24,13 @@ const secondaryDark = white;
 const greyLight = '#e0e0e0';
 const greyDark = '#a3a3a3';
 
+const viewport = {
+  sm: 'max-width: 576px',
+  md: 'max-width: 768px',
+  ld: 'max-width: 992px',
+  xd: 'max-width: 1200px'
+};
+
 const theme = {
   light: {
     black,
@@ -39,7 +46,8 @@ const theme = {
     boxShadow: boxShadowLight,
     productShadow: productShadowLight,
     primary: primaryLight,
-    secondary: secondaryLight
+    secondary: secondaryLight,
+    viewport
   },
   dark: {
     black,
@@ -55,7 +63,8 @@ const theme = {
     boxShadow: boxShadowDark,
     productShadow: productShadowDark,
     primary: primaryDark,
-    secondary: secondaryDark
+    secondary: secondaryDark,
+    viewport
   }
 };
 
