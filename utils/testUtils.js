@@ -53,3 +53,15 @@ export const generateProducts = quantity => {
 
   return products;
 };
+
+export const fakeHistoryItem = {
+  _id: fakeProduct._id,
+  name: fakeProduct.name,
+  category: fakeProduct.category,
+  img: {
+    url: fakeProduct.img.url
+  },
+  createDate: '2019-04-24T22:17:54.492Z'
+};
+
+export const fakeHistoryItems = [fakeHistoryItem];
