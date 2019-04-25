@@ -2,6 +2,8 @@ import React from 'react';
 
 import { getHistory } from '../services';
 
+import HistoryGrid from '../components/HistoryGrid';
+
 class History extends React.Component {
   static async getInitialProps() {
     const history = await getHistory();
@@ -12,7 +14,7 @@ class History extends React.Component {
   }
 
   render() {
-    return <h1>History</h1>;
+    return <HistoryGrid {...this.props} />;
   }
 }
 

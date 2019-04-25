@@ -30,7 +30,7 @@ class Index extends React.Component {
   render() {
     return (
       <>
-        <Banner />
+        <Banner>Electronics</Banner>
         <Products {...this.props} redeemProduct={this.redeemProduct} />
       </>
     );
