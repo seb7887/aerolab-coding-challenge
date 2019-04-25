@@ -1,6 +1,6 @@
 const config = {
-  token: process.env.API_KEY,
-  apiEndpoint: 'https://aerolab-challenge.now.sh'
+  apiEndpoint: 'https://aero-micro.now.sh',
+  perPage: 16
 };
 
 export default config;

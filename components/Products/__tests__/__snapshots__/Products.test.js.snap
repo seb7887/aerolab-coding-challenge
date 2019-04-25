@@ -1,0 +1,237 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Products renders and matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="style__ProductsLayout-sc-1vq3ucx-0 LYoHN"
+  >
+    <div
+      id="top"
+    >
+      <div
+        class="style__Container-sc-1cigh81-0 MGrfv"
+      >
+        <div
+          class="Quantity__Container-sc-1ye5v54-0 kMaZJe"
+        >
+          <span>
+            1 of 1
+          </span>
+           products
+        </div>
+        <div
+          class="sort"
+        >
+          <div
+            class="Filters__Container-sc-1w8ug50-0 eIrHFy"
+          >
+            <div
+              class="title"
+            >
+              Sort by:
+            </div>
+            <div
+              class="buttons"
+            >
+              <a
+                class="current"
+                data-testid="sort-filter"
+              >
+                Most recent
+              </a>
+              <a
+                class=""
+                data-testid="sort-filter"
+              >
+                Lower price
+              </a>
+              <a
+                class=""
+                data-testid="sort-filter"
+              >
+                Higher price
+              </a>
+            </div>
+          </div>
+          <div
+            class="Pagination__Container-j6vdk2-0 lhMuFC"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      id="filters"
+    >
+      <div
+        class="style__Container-sc-15ofmo2-0 SyiiL"
+      >
+        <h3>
+          Categories
+        </h3>
+        <a
+          class="current"
+          data-testid="category"
+        >
+          all
+        </a>
+        <a
+          class=""
+          data-testid="category"
+        >
+          gaming
+        </a>
+        <a
+          class=""
+          data-testid="category"
+        >
+          laptops
+        </a>
+        <a
+          class=""
+          data-testid="category"
+        >
+          tablets
+        </a>
+        <a
+          class=""
+          data-testid="category"
+        >
+          cameras
+        </a>
+        <a
+          class=""
+          data-testid="category"
+        >
+          audio
+        </a>
+        <a
+          class=""
+          data-testid="category"
+        >
+          tv
+        </a>
+        <a
+          class=""
+          data-testid="category"
+        >
+          drones
+        </a>
+        <a
+          class=""
+          data-testid="category"
+        >
+          accessories
+        </a>
+        <a
+          class=""
+          data-testid="category"
+        >
+          home
+        </a>
+      </div>
+    </div>
+    <div
+      id="grid"
+    >
+      <div
+        class="style__Grid-sc-15ghthz-0 gxQmBB"
+      >
+        <div
+          class="style__Container-g760h8-0 gPFdvq"
+          data-testid="product"
+        >
+          <div
+            class="style__Content-g760h8-5 tttFT"
+          >
+            <div
+              class="buy"
+            >
+              <img
+                alt="Buy"
+                src="/static/images/buy-orange.svg"
+              />
+            </div>
+            <img
+              alt="iPhone"
+              class="style__Img-g760h8-2 frYZGq"
+              src="/static/image/image.png"
+            />
+            <div
+              class="description"
+            >
+              <span
+                class="category"
+                data-testid="category"
+              >
+                Phones
+              </span>
+              <span
+                class="name"
+                data-testid="name"
+              >
+                iPhone
+              </span>
+            </div>
+            <div
+              class="overlay"
+            >
+              <div
+                class="buy"
+              >
+                <img
+                  alt="Buy"
+                  src="/static/images/buy-white.svg"
+                />
+              </div>
+              <div
+                class="style__OverlayBlock-g760h8-3 lladji"
+              >
+                <div
+                  class="cost-block"
+                >
+                  <span
+                    class="cost"
+                    data-testid="cost"
+                  >
+                    800
+                  </span>
+                  <img
+                    alt="Coin"
+                    class="Coin__Img-sc-1i19xvt-0 cnqtJE"
+                    src="/static/images/coin.svg"
+                  />
+                </div>
+                <a
+                  class="style__RedeemButton-g760h8-4 cUoLRy"
+                  data-testid="redeem-button"
+                >
+                  Redeem Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="bottom"
+    >
+      <div
+        class="Footer__Container-sc-1ac1drc-0 eoifZM"
+      >
+        <div
+          class="Quantity__Container-sc-1ye5v54-0 kMaZJe"
+        >
+          <span>
+            1 of 1
+          </span>
+           products
+        </div>
+        <div
+          class="Pagination__Container-j6vdk2-0 lhMuFC"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

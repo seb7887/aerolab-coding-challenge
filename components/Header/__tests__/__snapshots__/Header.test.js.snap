@@ -44,7 +44,7 @@ exports[`Header renders and matches snapshot 1`] = `
     >
       Dark Theme 
       <a
-        class="ToggleSwitch__Switch-sc-1oi44tq-0 bYYtGF"
+        class="ToggleSwitch__Switch-sc-1oi44tq-0 bpUcaC"
       />
       <a>
         <img

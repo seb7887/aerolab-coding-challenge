@@ -33,7 +33,6 @@ const Switch = styled.a`
   }
 
   &.active:after {
-    background-color: ${props => props.theme.green};
     left: calc(100% - 30px);
   }
 `;

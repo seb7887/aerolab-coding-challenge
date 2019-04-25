@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sort renders and matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="style__Container-sc-1cigh81-0 MGrfv"
+  >
+    <div
+      class="Quantity__Container-sc-1ye5v54-0 kMaZJe"
+    >
+      <span>
+        16 of 32
+      </span>
+       products
+    </div>
+    <div
+      class="sort"
+    >
+      <div
+        class="Filters__Container-sc-1w8ug50-0 eIrHFy"
+      >
+        <div
+          class="title"
+        >
+          Sort by:
+        </div>
+        <div
+          class="buttons"
+        >
+          <a
+            class="current"
+            data-testid="sort-filter"
+          >
+            Most recent
+          </a>
+          <a
+            class=""
+            data-testid="sort-filter"
+          >
+            Lower price
+          </a>
+          <a
+            class=""
+            data-testid="sort-filter"
+          >
+            Higher price
+          </a>
+        </div>
+      </div>
+      <div
+        class="Pagination__Container-j6vdk2-0 lhMuFC"
+      >
+        <a
+          data-testid="next-button"
+        >
+          <img
+            alt="Next Page"
+            src="/static/images/arrow-right.svg"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
