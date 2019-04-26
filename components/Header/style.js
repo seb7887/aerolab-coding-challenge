@@ -17,6 +17,12 @@ export const Navbar = styled.nav`
     align-items: center;
     margin-top: 0.8rem;
   }
+
+  @media (${props => props.theme.viewport.sm}) {
+    .bottom-container {
+      margin-top: 0.2rem;
+    }
+  }
 `;
 
 export const PointsContainer = styled.div`
@@ -47,6 +53,10 @@ export const PointsContainer = styled.div`
 
     @media (${props => props.theme.viewport.sm}) {
       padding: 4px 4px;
+
+      h2 {
+        margin: 0 2px 0 0;
+      }
     }
   }
 `;

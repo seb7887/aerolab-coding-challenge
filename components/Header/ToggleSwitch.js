@@ -43,6 +43,18 @@ const Switch = styled.a`
     &::after {
       width: 20px;
     }
+
+    &:active:after {
+      width: 27.5px;
+    }
+
+    &.active:active:after {
+      left: calc(100% - 27.5px);
+    }
+
+    &.active:after {
+      left: calc(100% - 20px);
+    }
   }
 `;
 

@@ -9,10 +9,6 @@ const Container = styled.div`
 
   .title {
     margin-right: 1rem;
-    @media (max-width: 650px) {
-      margin: 0;
-      display: none;
-    }
   }
 
   .buttons {
@@ -43,6 +39,13 @@ const Container = styled.div`
     &:hover {
       background-color: ${props => props.theme.orange};
       color: ${props => props.theme.white};
+    }
+  }
+
+  @media (${props => props.theme.viewport.md}) {
+    .title {
+      margin: 0;
+      display: none;
     }
   }
 `;

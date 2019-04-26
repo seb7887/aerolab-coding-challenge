@@ -29,7 +29,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     @media(${props => props.theme.viewport.sm}) {
-      font-size: 0.5rem;
+      font-size: 0.6rem;
     }
   }
 
@@ -52,4 +52,8 @@ export const Page = styled.div`
   padding: 1.2rem 1.5rem;
   background-color: ${props => props.theme.containerBg};
   box-shadow: ${props => props.theme.boxShadow};
+
+  @media (${props => props.theme.viewport.sm}) {
+    padding: 1rem 0.8rem;
+  }
 `;

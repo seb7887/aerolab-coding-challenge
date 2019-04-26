@@ -24,11 +24,16 @@ export const ProductsLayout = styled.div`
     grid-area: bottom;
   }
 
-  @media (max-width: 770px) {
+  @media (${props => props.theme.viewport.md}) {
     padding: 1rem;
   }
 
-  @media (max-width: 650px) {
+  @media (${props => props.theme.viewport.sm}) {
     padding: 0.5rem;
+    grid-template-areas:
+      'top'
+      'filters'
+      'grid'
+      'bottom';
   }
 `;
