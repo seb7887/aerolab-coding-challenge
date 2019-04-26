@@ -18,11 +18,16 @@ export const Container = styled.div`
     flex-grow: 2;
   }
 
-  @media (max-width: 650px) {
+  @media (${props => props.theme.md}) {
     font-size: 0.8rem;
   }
 
-  @media (max-width: 500px) {
+  @media (${props => props.theme.sm}) {
     font-size: 0.5rem;
+
+    .sort {
+      justify-content: flex-start;
+      padding-left: 0;
+    }
   }
 `;

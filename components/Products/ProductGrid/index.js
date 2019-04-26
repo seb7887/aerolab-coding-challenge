@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Product from '../Product';
 
@@ -18,5 +19,11 @@ const ProductGrid = ({ userPoints, products, redeemProduct }) => (
     })}
   </Grid>
 );
+
+ProductGrid.propTypes = {
+  userPoints: PropTypes.number.isRequired,
+  products: PropTypes.array.isRequired,
+  redeemProduct: PropTypes.func.isRequired
+};
 
 export default ProductGrid;

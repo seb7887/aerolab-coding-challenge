@@ -8,62 +8,54 @@ jest.mock('next/link', () => {
   };
 });
 
-let page = 0;
-const category = 'all';
-const sort = 'recent';
-let total = 32;
+let mockProps = {
+  category: 'all',
+  sort: 'recent',
+  page: '0',
+  total: 32
+};
+
+const renderSort = props => render(<Sort {...props} />);
 
 describe('Sort', () => {
   it('renders and matches snapshot', () => {
-    const { asFragment } = render(
-      <Sort category={category} sort={sort} page={page} total={total} />
-    );
+    const { asFragment } = renderSort(mockProps);
 
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('should display correct quantity', () => {
-    const { getByText } = render(
-      <Sort category={category} sort={sort} page={page} total={total} />
-    );
+    const { getByText } = renderSort(mockProps);
 
     expect(getByText(/16 of 32/i)).toBeTruthy();
   });
 
   it('should display three sort filter buttons', () => {
-    const { getAllByTestId } = render(
-      <Sort category={category} sort={sort} page={page} total={total} />
-    );
+    const { getAllByTestId } = renderSort(mockProps);
 
     expect(getAllByTestId('sort-filter').length).toBe(3);
   });
 
   it('should display only next button if it is the first page', () => {
-    const { getByTestId, queryByTestId } = render(
-      <Sort category={category} sort={sort} page={page} total={total} />
-    );
+    const { getByTestId, queryByTestId } = renderSort(mockProps);
 
     expect(queryByTestId('back-button')).toBeNull();
     expect(getByTestId('next-button')).not.toBeNull();
   });
 
   it('should display both button if it is not the first or the last page', () => {
-    page = 1;
-    total = 48;
-    const { getByTestId } = render(
-      <Sort category={category} sort={sort} page={page} total={total} />
-    );
+    mockProps.page = '1';
+    mockProps.total = 48;
+    const { getByTestId } = renderSort(mockProps);
 
     expect(getByTestId('back-button')).not.toBeNull();
     expect(getByTestId('next-button')).not.toBeNull();
   });
 
   it('should display only next button if it is the first page', () => {
-    page = 1;
-    total = 32;
-    const { getByTestId, queryByTestId } = render(
-      <Sort category={category} sort={sort} page={page} total={total} />
-    );
+    mockProps.page = '1';
+    mockProps.total = 32;
+    const { getByTestId, queryByTestId } = renderSort(mockProps);
 
     expect(getByTestId('back-button')).not.toBeNull();
     expect(queryByTestId('next-button')).toBeNull();

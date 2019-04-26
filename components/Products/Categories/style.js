@@ -24,4 +24,8 @@ export const Container = styled.div`
       text-decoration: underline;
     }
   }
+
+  @media (${props => props.theme.sm}) {
+    display: none;
+  }
 `;

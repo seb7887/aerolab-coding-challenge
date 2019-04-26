@@ -3,16 +3,16 @@
 exports[`Products renders and matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="style__ProductsLayout-sc-1vq3ucx-0 LYoHN"
+    class="style__ProductsLayout-sc-1vq3ucx-0 cjPZPa"
   >
     <div
       id="top"
     >
       <div
-        class="style__Container-sc-1cigh81-0 MGrfv"
+        class="style__Container-sc-1cigh81-0 dLqMUX"
       >
         <div
-          class="Quantity__Container-sc-1ye5v54-0 kMaZJe"
+          class="Quantity__Container-sc-1ye5v54-0 gGNvtk"
         >
           <span>
             1 of 1
@@ -23,7 +23,7 @@ exports[`Products renders and matches snapshot 1`] = `
           class="sort"
         >
           <div
-            class="Filters__Container-sc-1w8ug50-0 eIrHFy"
+            class="Filters__Container-sc-1w8ug50-0 kfmbs"
           >
             <div
               class="title"
@@ -63,7 +63,7 @@ exports[`Products renders and matches snapshot 1`] = `
       id="filters"
     >
       <div
-        class="style__Container-sc-15ofmo2-0 SyiiL"
+        class="style__Container-sc-15ofmo2-0 bDseUP"
       >
         <h3>
           Categories
@@ -134,14 +134,14 @@ exports[`Products renders and matches snapshot 1`] = `
       id="grid"
     >
       <div
-        class="style__Grid-sc-15ghthz-0 bNIUmK"
+        class="style__Grid-sc-15ghthz-0 bRFxGF"
       >
         <div
-          class="style__Container-g760h8-0 gPFdvq"
+          class="style__Container-g760h8-0 cRZAeB"
           data-testid="product"
         >
           <div
-            class="style__Content-g760h8-5 tttFT"
+            class="style__Content-g760h8-5 cyJBbK"
           >
             <div
               class="buy"
@@ -197,7 +197,7 @@ exports[`Products renders and matches snapshot 1`] = `
                   </span>
                   <img
                     alt="Coin"
-                    class="Coin__Img-sc-1i19xvt-0 cnqtJE"
+                    class="Coin__Img-sc-1i19xvt-0 bcGCMK"
                     src="/static/images/coin.svg"
                   />
                 </div>
@@ -220,7 +220,7 @@ exports[`Products renders and matches snapshot 1`] = `
         class="Footer__Container-sc-1ac1drc-0 eoifZM"
       >
         <div
-          class="Quantity__Container-sc-1ye5v54-0 kMaZJe"
+          class="Quantity__Container-sc-1ye5v54-0 gGNvtk"
         >
           <span>
             1 of 1

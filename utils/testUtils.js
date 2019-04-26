@@ -2,7 +2,7 @@ import faker from 'faker';
 
 export const fakeUser = {
   name: 'John Kite',
-  points: '7000'
+  points: 7000
 };
 
 export const mockCategories = [

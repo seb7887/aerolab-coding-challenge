@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Router from 'next/router';
 import Link from 'next/link';
 import NProgress from 'nprogress';
@@ -59,5 +60,11 @@ class Header extends React.Component {
     );
   }
 }
+
+Header.propTypes = {
+  me: PropTypes.object.isRequired,
+  changeTheme: PropTypes.func.isRequired,
+  isActive: PropTypes.bool.isRequired
+};
 
 export default Header;

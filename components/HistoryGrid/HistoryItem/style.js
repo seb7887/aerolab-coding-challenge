@@ -25,6 +25,10 @@ export const Container = styled.div`
       font-weight: 600;
     }
   }
+
+  @media (${props => props.theme.sm}) {
+    margin-bottom: 1rem;
+  }
 `;
 
 export const Img = styled.img`

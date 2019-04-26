@@ -29,4 +29,14 @@ export const Content = styled.div`
     background-color: ${props => props.theme.orange};
     opacity: 0.65;
   }
+
+  @media (${props => props.theme.sm}) {
+    min-height: 150px;
+    margin: 1rem -0.8rem;
+
+    .title {
+      font-size: 1.5rem;
+      padding: 0 1.5rem;
+    }
+  }
 `;

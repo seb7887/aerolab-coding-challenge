@@ -11,26 +11,22 @@ jest.mock('next/link', () => {
 import { fakeUser, fakeProducts } from '../../../utils/testUtils';
 
 const mockRedeemProduct = jest.fn();
-const page = 0;
-const sort = 'recent';
-const category = 'all';
-const products = {
+
+const mockProps = {
+  me: fakeUser,
+  page: '0',
+  sort: 'recent',
+  category: 'all',
   products: fakeProducts,
-  total: fakeProducts.length
+  total: fakeProducts.length,
+  redeemProduct: mockRedeemProduct
 };
+
+const renderProducts = props => render(<Products {...props} />);
 
 describe('Products', () => {
   it('renders and matches snapshot', () => {
-    const { asFragment } = render(
-      <Products
-        me={fakeUser}
-        page={page}
-        sort={sort}
-        category={category}
-        products={products}
-        redeemProduct={mockRedeemProduct}
-      />
-    );
+    const { asFragment } = renderProducts(mockProps);
 
     expect(asFragment()).toMatchSnapshot();
   });

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from 'next/link';
 import styled from 'styled-components';
 
@@ -9,10 +10,6 @@ const Container = styled.div`
 
   .title {
     margin-right: 1rem;
-    @media (max-width: 650px) {
-      margin: 0;
-      display: none;
-    }
   }
 
   .buttons {
@@ -43,6 +40,13 @@ const Container = styled.div`
     &:hover {
       background-color: ${props => props.theme.orange};
       color: ${props => props.theme.white};
+    }
+  }
+
+  @media (${props => props.theme.md}) {
+    .title {
+      margin: 0;
+      display: none;
     }
   }
 `;
@@ -104,6 +108,11 @@ const Filters = ({ category, sort }) => {
       </div>
     </Container>
   );
+};
+
+Filters.propTypes = {
+  category: PropTypes.string.isRequired,
+  sort: PropTypes.string.isRequired
 };
 
 export default Filters;

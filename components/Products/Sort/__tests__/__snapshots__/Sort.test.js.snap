@@ -3,10 +3,10 @@
 exports[`Sort renders and matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="style__Container-sc-1cigh81-0 MGrfv"
+    class="style__Container-sc-1cigh81-0 dLqMUX"
   >
     <div
-      class="Quantity__Container-sc-1ye5v54-0 kMaZJe"
+      class="Quantity__Container-sc-1ye5v54-0 gGNvtk"
     >
       <span>
         16 of 32
@@ -17,7 +17,7 @@ exports[`Sort renders and matches snapshot 1`] = `
       class="sort"
     >
       <div
-        class="Filters__Container-sc-1w8ug50-0 eIrHFy"
+        class="Filters__Container-sc-1w8ug50-0 kfmbs"
       >
         <div
           class="title"
@@ -55,6 +55,7 @@ exports[`Sort renders and matches snapshot 1`] = `
         >
           <img
             alt="Next Page"
+            class="NextButton__Img-sc-1ix8gpw-0 hZTJeO"
             src="/static/images/arrow-right.svg"
           />
         </a>

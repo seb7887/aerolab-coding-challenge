@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import BuyIcon from './BuyIcon';
 import Coin from '../../shared/Coin';
@@ -57,5 +58,11 @@ const Product = ({ product, userPoints, redeemProduct }) => (
     </Content>
   </Container>
 );
+
+Product.propTypes = {
+  product: PropTypes.object.isRequired,
+  userPoints: PropTypes.number.isRequired,
+  redeemProduct: PropTypes.func.isRequired
+};
 
 export default Product;

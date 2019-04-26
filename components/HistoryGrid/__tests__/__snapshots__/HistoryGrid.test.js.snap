@@ -3,7 +3,7 @@
 exports[`HistoryGrid renders and matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="style__Content-ya8ux5-0 fnKozQ"
+    class="style__Content-ya8ux5-0 kwQAgQ"
   >
     <h1
       class="title"
@@ -15,10 +15,10 @@ exports[`HistoryGrid renders and matches snapshot 1`] = `
     />
   </div>
   <div
-    class="style__Grid-sc-1yaakt4-0 cDtyHz"
+    class="style__Grid-sc-1yaakt4-0 dgJodS"
   >
     <div
-      class="style__Container-sc-1ba92t9-0 dVxYRm"
+      class="style__Container-sc-1ba92t9-0 eGpjmI"
       data-testid="history-item"
     >
       <div>

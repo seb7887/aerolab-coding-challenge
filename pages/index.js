@@ -12,10 +12,11 @@ class Index extends React.Component {
     const sort = query.sort ? query.sort : 'recent';
     const category = query.category ? query.category : 'all';
 
-    const products = await getProducts(query);
+    const { products, total } = await getProducts(query);
 
     return {
       products,
+      total,
       page,
       sort,
       category

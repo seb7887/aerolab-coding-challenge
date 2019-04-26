@@ -24,8 +24,12 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     color: ${props => props.theme.primary};
 
-    @media (max-width: 770px) {
+    @media (${props => props.theme.md}) {
       padding: 0;
+    }
+
+    @media(${props => props.theme.sm}) {
+      font-size: 0.6rem;
     }
   }
 
@@ -48,4 +52,8 @@ export const Page = styled.div`
   padding: 1.2rem 1.5rem;
   background-color: ${props => props.theme.containerBg};
   box-shadow: ${props => props.theme.boxShadow};
+
+  @media (${props => props.theme.sm}) {
+    padding: 1rem 0.8rem;
+  }
 `;

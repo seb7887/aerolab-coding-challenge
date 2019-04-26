@@ -10,6 +10,10 @@ export const Container = styled.div`
   &:hover {
     transform: translateY(-1rem);
   }
+
+  @media (${props => props.theme.sm}) {
+    margin-bottom: 1rem;
+  }
 `;
 
 export const NeedCoins = styled.div`
@@ -77,6 +81,10 @@ export const Content = styled.div`
     .name {
       font-weight: 600;
     }
+  }
+
+  @media (${props => props.theme.sm}) {
+    font-size: 0.8rem;
   }
 
   .overlay {

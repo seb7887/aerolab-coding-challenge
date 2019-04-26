@@ -29,28 +29,27 @@ afterEach(() => {
   mockAddPointsService.mockClear();
 });
 
+const renderHeader = () =>
+  render(
+    <Header me={fakeUser} changeTheme={mockChangeTheme} isActive={false} />
+  );
+
 describe('Header', () => {
   it('renders and matches snapshot', () => {
-    const { asFragment } = render(
-      <Header me={fakeUser} changeTheme={mockChangeTheme} isActive={false} />
-    );
+    const { asFragment } = renderHeader();
 
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('should display user name and points', () => {
-    const { getByTestId } = render(
-      <Header me={fakeUser} changeTheme={mockChangeTheme} isActive={false} />
-    );
+    const { getByTestId } = renderHeader();
 
     expect(getByTestId('header').textContent).toContain(fakeUser.name);
     expect(getByTestId('header').textContent).toContain(fakeUser.points);
   });
 
   it('should add points', () => {
-    const { getByTestId } = render(
-      <Header me={fakeUser} changeTheme={mockChangeTheme} isActive={false} />
-    );
+    const { getByTestId } = renderHeader();
 
     const points = getByTestId('points');
     fireEvent.click(points);

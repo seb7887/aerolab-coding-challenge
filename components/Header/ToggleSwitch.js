@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Switch = styled.a`
@@ -35,6 +36,27 @@ const Switch = styled.a`
   &.active:after {
     left: calc(100% - 30px);
   }
+
+  @media (${props => props.theme.sm}) {
+    height: 20px;
+    width: 35px;
+
+    &::after {
+      width: 20px;
+    }
+
+    &:active:after {
+      width: 27.5px;
+    }
+
+    &.active:active:after {
+      left: calc(100% - 27.5px);
+    }
+
+    &.active:after {
+      left: calc(100% - 20px);
+    }
+  }
 `;
 
 const ToggleSwitch = ({ isActive, changeTheme }) => (
@@ -42,5 +64,10 @@ const ToggleSwitch = ({ isActive, changeTheme }) => (
     Dark Theme <Switch className={isActive && 'active'} onClick={changeTheme} />
   </>
 );
+
+ToggleSwitch.propTypes = {
+  isActive: PropTypes.bool.isRequired,
+  changeTheme: PropTypes.func.isRequired
+};
 
 export default ToggleSwitch;
