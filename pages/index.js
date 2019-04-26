@@ -1,6 +1,8 @@
 import React from 'react';
 import Router from 'next/router';
 
+import { serviceWorker } from '../config';
+
 import { getProducts, redeem } from '../services';
 
 import Banner from '../components/Banner';
@@ -21,6 +23,12 @@ class Index extends React.Component {
       sort,
       category
     };
+  }
+
+  componentDidMount() {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register(serviceWorker);
+    }
   }
 
   redeemProduct = async productId => {
