@@ -7,6 +7,10 @@ export const Grid = styled.div`
   grid-column-gap: 1.5rem;
   grid-row-gap: 2.5rem;
 
+  @media (${props => props.theme.viewport.md}) {
+    grid-template-columns: repeat(2, auto);
+  }
+
   @media (${props => props.theme.viewport.sm}) {
     display: flex;
     flex-direction: column;
