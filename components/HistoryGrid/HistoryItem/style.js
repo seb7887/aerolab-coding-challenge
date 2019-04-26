@@ -26,7 +26,7 @@ export const Container = styled.div`
     }
   }
 
-  @media (${props => props.theme.viewport.sm}) {
+  @media (${props => props.theme.sm}) {
     margin-bottom: 1rem;
   }
 `;

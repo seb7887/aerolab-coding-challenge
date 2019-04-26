@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Banner from '../Banner';
 import HistoryItem from './HistoryItem';
@@ -15,5 +16,9 @@ const History = ({ history }) => (
     </Grid>
   </>
 );
+
+History.propTypes = {
+  history: PropTypes.array.isRequired
+};
 
 export default History;

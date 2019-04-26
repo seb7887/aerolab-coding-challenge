@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from 'next/link';
 import styled from 'styled-components';
 
@@ -42,7 +43,7 @@ const Container = styled.div`
     }
   }
 
-  @media (${props => props.theme.viewport.md}) {
+  @media (${props => props.theme.md}) {
     .title {
       margin: 0;
       display: none;
@@ -107,6 +108,11 @@ const Filters = ({ category, sort }) => {
       </div>
     </Container>
   );
+};
+
+Filters.propTypes = {
+  category: PropTypes.string.isRequired,
+  sort: PropTypes.string.isRequired
 };
 
 export default Filters;

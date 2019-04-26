@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from 'next/link';
 import styled from 'styled-components';
 
@@ -52,6 +53,12 @@ const Pagination = ({ category, sort, page, total, perPage }) => {
       )}
     </Container>
   );
+};
+
+Pagination.propTypes = {
+  page: PropTypes.string.isRequired,
+  total: PropTypes.number.isRequired,
+  perPage: PropTypes.number.isRequired
 };
 
 export default Pagination;

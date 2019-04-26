@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Quantity from '../../shared/Quantity';
 import Filters from './Filters';
@@ -27,6 +28,13 @@ const Sort = ({ page, sort, category, total }) => {
       </div>
     </Container>
   );
+};
+
+Sort.propTypes = {
+  page: PropTypes.string.isRequired,
+  sort: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  total: PropTypes.number.isRequired
 };
 
 export default Sort;

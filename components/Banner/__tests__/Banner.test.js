@@ -1,25 +1,18 @@
 import { render } from 'react-testing-library';
-import { ThemeProvider } from 'styled-components';
-import theme from '../../../utils/theme';
 
 import Banner from '../index';
 
-const renderBanner = ({ theme, title }) =>
-  render(
-    <ThemeProvider theme={theme}>
-      <Banner>{title}</Banner>
-    </ThemeProvider>
-  );
+const renderBanner = () => render(<Banner>Electronics</Banner>);
 
 describe('Banner', () => {
   it('renders and matches snapshot', () => {
-    const { asFragment } = renderBanner({ theme, title: 'Electronics' });
+    const { asFragment } = renderBanner();
 
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('should display Electronics title', () => {
-    const { getByText } = renderBanner({ theme, title: 'Electronics' });
+    const { getByText } = renderBanner();
 
     expect(getByText(/electronics/i)).toBeTruthy();
   });

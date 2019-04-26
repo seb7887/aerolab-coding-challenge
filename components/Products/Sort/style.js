@@ -18,11 +18,11 @@ export const Container = styled.div`
     flex-grow: 2;
   }
 
-  @media (${props => props.theme.viewport.md}) {
+  @media (${props => props.theme.md}) {
     font-size: 0.8rem;
   }
 
-  @media (${props => props.theme.viewport.sm}) {
+  @media (${props => props.theme.sm}) {
     font-size: 0.5rem;
 
     .sort {

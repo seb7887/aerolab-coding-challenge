@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from 'next/link';
 import shortid from 'shortid';
 
@@ -45,5 +46,10 @@ const Categories = ({ category, sort }) => (
     </>
   </Container>
 );
+
+Categories.propTypes = {
+  category: PropTypes.string.isRequired,
+  sort: PropTypes.string.isRequired
+};
 
 export default Categories;

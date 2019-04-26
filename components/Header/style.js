@@ -18,7 +18,7 @@ export const Navbar = styled.nav`
     margin-top: 0.8rem;
   }
 
-  @media (${props => props.theme.viewport.sm}) {
+  @media (${props => props.theme.sm}) {
     .bottom-container {
       margin-top: 0.2rem;
     }
@@ -51,7 +51,7 @@ export const PointsContainer = styled.div`
       margin: 0 5px 0 0;
     }
 
-    @media (${props => props.theme.viewport.sm}) {
+    @media (${props => props.theme.sm}) {
       padding: 4px 4px;
 
       h2 {

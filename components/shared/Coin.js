@@ -7,7 +7,7 @@ const Img = styled.img`
   animation: ${flipCoin} 8s infinite;
   animation-delay: 3s;
 
-  @media (${props => props.theme.viewport.sm}) {
+  @media (${props => props.theme.sm}) {
     width: 1.5rem;
   }
 `;

@@ -7,11 +7,11 @@ export const Grid = styled.div`
   grid-row-gap: 2.5rem;
   padding: 1.5rem;
 
-  @media (${props => props.theme.viewport.md}) {
+  @media (${props => props.theme.md}) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (${props => props.theme.viewport.sm}) {
+  @media (${props => props.theme.sm}) {
     display: flex;
     flex-direction: column;
   }

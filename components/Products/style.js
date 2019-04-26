@@ -24,11 +24,11 @@ export const ProductsLayout = styled.div`
     grid-area: bottom;
   }
 
-  @media (${props => props.theme.viewport.md}) {
+  @media (${props => props.theme.md}) {
     padding: 1rem;
   }
 
-  @media (${props => props.theme.viewport.sm}) {
+  @media (${props => props.theme.sm}) {
     padding: 0.5rem;
     grid-template-areas:
       'top'

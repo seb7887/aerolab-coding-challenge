@@ -3,7 +3,7 @@
 exports[`Header renders and matches snapshot 1`] = `
 <DocumentFragment>
   <nav
-    class="style__Navbar-hz5b73-0 cfNmiU"
+    class="style__Navbar-hz5b73-0 guwRFn"
     data-testid="header"
   >
     <div
@@ -16,7 +16,7 @@ exports[`Header renders and matches snapshot 1`] = `
         />
       </a>
       <div
-        class="style__PointsContainer-hz5b73-1 hPecVr"
+        class="style__PointsContainer-hz5b73-1 jvgHep"
         data-testid="points"
       >
         <h2
@@ -32,7 +32,7 @@ exports[`Header renders and matches snapshot 1`] = `
           </h2>
           <img
             alt="Coin"
-            class="Coin__Img-sc-1i19xvt-0 cnqtJE"
+            class="Coin__Img-sc-1i19xvt-0 bcGCMK"
             src="/static/images/coin.svg"
           />
         </div>
@@ -44,11 +44,12 @@ exports[`Header renders and matches snapshot 1`] = `
     >
       Dark Theme 
       <a
-        class="ToggleSwitch__Switch-sc-1oi44tq-0 bpUcaC"
+        class="ToggleSwitch__Switch-sc-1oi44tq-0 XdoNv"
       />
       <a>
         <img
           alt="History"
+          class="HistoryIcon__Img-sc-1wogzz1-0 hNfEdZ"
           src="/static/images/history.svg"
         />
       </a>

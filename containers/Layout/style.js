@@ -24,11 +24,11 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     color: ${props => props.theme.primary};
 
-    @media (${props => props.theme.viewport.md}) {
+    @media (${props => props.theme.md}) {
       padding: 0;
     }
 
-    @media(${props => props.theme.viewport.sm}) {
+    @media(${props => props.theme.sm}) {
       font-size: 0.6rem;
     }
   }
@@ -53,7 +53,7 @@ export const Page = styled.div`
   background-color: ${props => props.theme.containerBg};
   box-shadow: ${props => props.theme.boxShadow};
 
-  @media (${props => props.theme.viewport.sm}) {
+  @media (${props => props.theme.sm}) {
     padding: 1rem 0.8rem;
   }
 `;

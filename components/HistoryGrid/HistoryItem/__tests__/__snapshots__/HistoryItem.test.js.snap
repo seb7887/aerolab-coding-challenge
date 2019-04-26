@@ -3,7 +3,7 @@
 exports[`HistoryItem renders and matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="style__Container-sc-1ba92t9-0 dVxYRm"
+    class="style__Container-sc-1ba92t9-0 eGpjmI"
     data-testid="history-item"
   >
     <div>

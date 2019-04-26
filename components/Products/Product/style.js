@@ -11,7 +11,7 @@ export const Container = styled.div`
     transform: translateY(-1rem);
   }
 
-  @media (${props => props.theme.viewport.sm}) {
+  @media (${props => props.theme.sm}) {
     margin-bottom: 1rem;
   }
 `;
@@ -83,7 +83,7 @@ export const Content = styled.div`
     }
   }
 
-  @media (${props => props.theme.viewport.sm}) {
+  @media (${props => props.theme.sm}) {
     font-size: 0.8rem;
   }
 

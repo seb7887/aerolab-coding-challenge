@@ -3,14 +3,14 @@
 exports[`ProductGrid renders and matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="style__Grid-sc-15ghthz-0 bNIUmK"
+    class="style__Grid-sc-15ghthz-0 bRFxGF"
   >
     <div
-      class="style__Container-g760h8-0 gPFdvq"
+      class="style__Container-g760h8-0 cRZAeB"
       data-testid="product"
     >
       <div
-        class="style__Content-g760h8-5 tttFT"
+        class="style__Content-g760h8-5 cyJBbK"
       >
         <div
           class="buy"
@@ -22,7 +22,7 @@ exports[`ProductGrid renders and matches snapshot 1`] = `
             You need 500 
             <img
               alt="Coin"
-              class="Coin__Img-sc-1i19xvt-0 cnqtJE"
+              class="Coin__Img-sc-1i19xvt-0 bcGCMK"
               src="/static/images/coin.svg"
             />
           </div>

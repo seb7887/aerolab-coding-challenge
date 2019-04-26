@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Switch = styled.a`
@@ -36,7 +37,7 @@ const Switch = styled.a`
     left: calc(100% - 30px);
   }
 
-  @media (${props => props.theme.viewport.sm}) {
+  @media (${props => props.theme.sm}) {
     height: 20px;
     width: 35px;
 
@@ -63,5 +64,10 @@ const ToggleSwitch = ({ isActive, changeTheme }) => (
     Dark Theme <Switch className={isActive && 'active'} onClick={changeTheme} />
   </>
 );
+
+ToggleSwitch.propTypes = {
+  isActive: PropTypes.bool.isRequired,
+  changeTheme: PropTypes.func.isRequired
+};
 
 export default ToggleSwitch;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import formatDate from '../../../utils/formatDate';
 
@@ -18,5 +19,9 @@ const HistoryItem = ({ item }) => (
     </div>
   </Container>
 );
+
+HistoryItem.propTypes = {
+  item: PropTypes.object.isRequired
+};
 
 export default HistoryItem;

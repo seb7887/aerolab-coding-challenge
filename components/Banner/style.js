@@ -30,7 +30,7 @@ export const Content = styled.div`
     opacity: 0.65;
   }
 
-  @media (${props => props.theme.viewport.sm}) {
+  @media (${props => props.theme.sm}) {
     min-height: 150px;
     margin: 1rem -0.8rem;
 

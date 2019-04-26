@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Coin from '../shared/Coin';
 
@@ -13,5 +14,11 @@ const Points = ({ name, points, addPoints }) => (
     </div>
   </PointsContainer>
 );
+
+Points.propTypes = {
+  name: PropTypes.string.isRequired,
+  points: PropTypes.number.isRequired,
+  addPoints: PropTypes.func.isRequired
+};
 
 export default Points;

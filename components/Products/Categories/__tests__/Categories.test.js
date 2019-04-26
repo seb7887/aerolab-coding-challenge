@@ -10,30 +10,28 @@ jest.mock('next/link', () => {
   };
 });
 
-const category = 'all';
-const sort = 'recent';
+const mockProps = {
+  category: 'all',
+  sort: 'recent'
+};
+
+const renderCategories = props => render(<Categories {...props} />);
 
 describe('Categories', () => {
   it('renders and matches snapshot', () => {
-    const { asFragment } = render(
-      <Categories category={category} sort={sort} />
-    );
+    const { asFragment } = renderCategories(mockProps);
 
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('should display Categories title', () => {
-    const { getByText } = render(
-      <Categories category={category} sort={sort} />
-    );
+    const { getByText } = renderCategories(mockProps);
 
     expect(getByText(/categories/i)).toBeTruthy();
   });
 
   it('should display all the categories', () => {
-    const { getAllByTestId } = render(
-      <Categories category={category} sort={sort} />
-    );
+    const { getAllByTestId } = renderCategories(mockProps);
 
     expect(getAllByTestId('category').length).toBe(mockCategories.length);
   });

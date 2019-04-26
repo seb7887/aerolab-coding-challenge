@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -8,16 +9,8 @@ const Container = styled.div`
   padding-right: 1rem;
   border-right: 1px solid ${props => props.theme.primary};
 
-  @media (max-width: 770px) {
+  @media (${props => props.theme.md}) {
     display: none;
-  }
-
-  @media (max-width: 650px) {
-    font-size: 0.8rem;
-  }
-
-  @media (max-width: 500px) {
-    font-size: 0.5rem;
   }
 `;
 
@@ -29,5 +22,10 @@ const Quantity = ({ quantity, total }) => (
     products
   </Container>
 );
+
+Quantity.propTypes = {
+  quantity: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired
+};
 
 export default Quantity;

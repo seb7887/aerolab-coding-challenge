@@ -4,17 +4,18 @@ import HistoryGrid from '../index';
 
 import { fakeHistoryItems } from '../../../utils/testUtils';
 
+const renderHistoryGrid = () =>
+  render(<HistoryGrid history={fakeHistoryItems} />);
+
 describe('HistoryGrid', () => {
   it('renders and matches snapshot', () => {
-    const { asFragment } = render(<HistoryGrid history={fakeHistoryItems} />);
+    const { asFragment } = renderHistoryGrid();
 
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('should display a correct quantity of products', () => {
-    const { getAllByTestId } = render(
-      <HistoryGrid history={fakeHistoryItems} />
-    );
+    const { getAllByTestId } = renderHistoryGrid();
 
     expect(getAllByTestId('history-item').length).toBe(fakeHistoryItems.length);
   });
