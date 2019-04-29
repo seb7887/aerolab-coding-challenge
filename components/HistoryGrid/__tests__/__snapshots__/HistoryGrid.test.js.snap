@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HistoryGrid renders and matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="style__Content-ya8ux5-0 kwQAgQ"
+  >
+    <h1
+      class="title"
+    >
+      History
+    </h1>
+    <div
+      class="overlay"
+    />
+  </div>
+  <div
+    class="style__Grid-sc-1yaakt4-0 dgJodS"
+  >
+    <div
+      class="style__Container-sc-1ba92t9-0 eGpjmI"
+      data-testid="history-item"
+    >
+      <div>
+        <span
+          data-testid="create-date"
+        >
+          04/24/2019 22:17
+        </span>
+      </div>
+      <img
+        alt="iPhone"
+        class="style__Img-sc-1ba92t9-1 bIOfTM"
+        src="/static/image/image.png"
+      />
+      <div
+        class="description"
+      >
+        <span
+          data-testid="category"
+        >
+          Phones
+        </span>
+        <span
+          class="name"
+          data-testid="name"
+        >
+          iPhone
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

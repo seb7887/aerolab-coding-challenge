@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Banner renders and matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="style__Content-ya8ux5-0 kwQAgQ"
+  >
+    <h1
+      class="title"
+    >
+      Electronics
+    </h1>
+    <div
+      class="overlay"
+    />
+  </div>
+</DocumentFragment>
+`;
