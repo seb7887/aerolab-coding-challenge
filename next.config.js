@@ -1,21 +1,19 @@
-// require('dotenv').config();
-
-const path = require('path');
-const DotEnv = require('dotenv-webpack');
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 module.exports = {
   webpack: config => {
-    config.plugins = config.plugins || [];
-
-    config.plugins = [
-      ...config.plugins,
-
-      // Read the .env files
-      new DotEnv({
-        path: path.join(__dirname, '.env'),
-        systemvars: true
+    config.plugins.push(
+      new SWPrecacheWebpackPlugin({
+        minify: true,
+        staticFileGlobsIgnorePatterns: [/\.next/],
+        runtimeCaching: [
+          {
+            handler: 'networkFirst',
+            urlPattern: /^https?.*/
+          }
+        ]
       })
-    ];
+    );
     return config;
   }
 };

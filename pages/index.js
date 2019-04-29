@@ -10,7 +10,7 @@ import Products from '../components/Products';
 
 class Index extends React.Component {
   static async getInitialProps({ query }) {
-    const page = query.page ? query.page : 0;
+    const page = query.page ? query.page : '0';
     const sort = query.sort ? query.sort : 'recent';
     const category = query.category ? query.category : 'all';
 
@@ -27,7 +27,11 @@ class Index extends React.Component {
 
   componentDidMount() {
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register(serviceWorker);
+      navigator.serviceWorker
+        .register(serviceWorker)
+        .catch(err =>
+          console.warn('Service worker registration failed', err.message)
+        );
     }
   }
 

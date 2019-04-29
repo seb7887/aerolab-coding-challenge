@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Quantity from '../shared/Quantity';
 import Pagination from '../shared/Pagination';
 
-import config from '../../config';
+import { perPage } from '../../config';
 
 const Container = styled.div`
   display: flex;
@@ -20,7 +20,6 @@ const Container = styled.div`
 `;
 
 const Footer = ({ page, total }) => {
-  const { perPage } = config;
   const quantity = total > perPage ? (parseInt(page, 10) + 1) * perPage : total;
 
   return (

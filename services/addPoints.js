@@ -1,11 +1,9 @@
 import fetch from 'isomorphic-unfetch';
 
-import config from '../config';
-
-const { apiEndpoint } = config;
+import { endpoint } from '../config';
 
 export const addPoints = async () => {
-  const response = await fetch(`${apiEndpoint}/user/points`, {
+  const response = await fetch(`${endpoint}/user/points`, {
     method: 'GET'
   });
   const json = await response.json();
