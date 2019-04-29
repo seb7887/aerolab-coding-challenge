@@ -7,10 +7,9 @@ import Pagination from '../../shared/Pagination';
 
 import { Container } from './style';
 
-import config from '../../../config';
+import { perPage } from '../../../config';
 
 const Sort = ({ page, sort, category, total }) => {
-  const { perPage } = config;
   const quantity = total > perPage ? (parseInt(page, 10) + 1) * perPage : total;
 
   return (

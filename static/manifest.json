@@ -1,0 +1,21 @@
+{
+  "name": "aerolab store",
+  "short_name": "aerolab store",
+  "lang": "en-EN",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#ff6600",
+  "background_color": "#f0f0f0",
+  "icons": [
+    {
+      "src": "/static/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

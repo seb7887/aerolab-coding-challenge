@@ -1,11 +1,9 @@
 import fetch from 'isomorphic-unfetch';
 
-import config from '../config';
-
-const { apiEndpoint } = config;
+import { endpoint } from '../config';
 
 export const getHistory = async () => {
-  const response = await fetch(`${apiEndpoint}/user/history`, {
+  const response = await fetch(`${endpoint}/user/history`, {
     method: 'GET'
   });
   const history = await response.json();

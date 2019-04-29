@@ -1,11 +1,9 @@
 import fetch from 'isomorphic-unfetch';
 
-import config from '../config';
-
-const { apiEndpoint } = config;
+import { endpoint } from '../config';
 
 export const getCurrentUser = async () => {
-  const response = await fetch(`${apiEndpoint}/user/me`, {
+  const response = await fetch(`${endpoint}/user/me`, {
     method: 'GET'
   });
   const json = await response.json();
